@@ -210,14 +210,14 @@ def cls():
 #Funcion que sirve como menu para definir que hara el usuario, y dirigirlo a la funcion necesaria
 def accion(abierto, inventario):
     print("===========================================================")
-    accion = input('Accion a realizar:\n1)AÑADIR PRODUCTO\n2)CONSULTAR INVENTARIO\n3)CONSULTAR VENTAS POR VENDEDOR\n4)CONSULTAR VENTAS POR ARTICULO\n5)REGISTRAR VENTA\n6)CERRAR\n')
+    accion = input('Accion a realizar:\n1)AÑADIR PRODUCTO\n2)REGISTRAR VENTA\n3)CONSULTAR VENTAS POR VENDEDOR\n4)CONSULTAR VENTAS POR ARTICULO\n5)CONSULTAR INVENTARIO\n6)CERRAR\n')
     cls()
     if accion == '1':
         cls()
         anadir_producto(inventario)
     elif accion == '2':
         cls()
-        consultar_inventario(inventario)
+        registrar_venta(inventario)
     elif accion == '3':
         cls()
         consultar_ventas(inventario, "1")
@@ -226,7 +226,7 @@ def accion(abierto, inventario):
         consultar_ventas(inventario, "2")
     elif accion == '5':
         cls()
-        registrar_venta(inventario)
+        consultar_inventario(inventario)
     elif accion == '6':
         abierto[0] = "1"
     else:
